@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClassRadar Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>📚 ClassRadar</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="syllabus" required>
+        <button type="submit">Upload Syllabus</button>
+    </form>
+    <footer>Designed with 💙 by 吴雨馨</footer>
+</body>
+</html>
