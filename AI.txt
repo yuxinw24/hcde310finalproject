@@ -1,0 +1,10 @@
+
+
+
+
+All final code, writing, and design decisions were made by me.
+ChatGPT acted as a collaborator in the brainstorming, debugging,
+and refinement process—but the final integration, testing, and
+interpretation were done by me
+
+

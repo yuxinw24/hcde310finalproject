@@ -1,69 +1,142 @@
+/* Reset some defaults */
 body {
-    font-family: "Helvetica Neue", sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    background: #f9f9ff;
+    color: #333;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    margin-top: 30px;
     color: #2c3e50;
+    font-size: 2em;
+    margin-top: 2rem;
 }
 
 form {
-    width: 320px;
-    margin: 40px auto;
     background: #fff;
-    padding: 30px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
 input[type="file"] {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
     width: 100%;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    background: #f1f1f1;
 }
 
 button {
-    background-color: #3498db;
+    background-color: #4CAF50;
     color: white;
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 6px;
-    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #45a049;
 }
 
-ul {
+/* Loader spinner */
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+    margin: 1rem auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Heatmap image on results page */
+img.heatmap {
+    margin-top: 2rem;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+/* Task list styles */
+ul.task-list {
+    text-align: left;
+    margin: 2rem auto;
     max-width: 600px;
-    margin: 20px auto;
+    list-style: none;
     padding: 0;
-    list-style-type: none;
 }
 
-li {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
+ul.task-list li {
+    background: #e9f5e9;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-left: 5px solid #4CAF50;
+    border-radius: 6px;
 }
 
-img {
-    display: block;
-    margin: 40px auto;
-    max-width: 80%;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-}
-
+/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
+    margin-top: 3rem;
+    font-size: 0.9rem;
     color: #888;
+}
+.step-research {
+    color: #6a5acd; /* soft purple */
+    font-weight: bold;
+}
+
+.step-draft {
+    color: #1e90ff; /* sky blue */
+    font-weight: bold;
+}
+
+.step-revise {
+    color: #f39c12; /* orange */
+    font-weight: bold;
+}
+
+.step-submit {
+    color: #e74c3c; /* red */
+    font-weight: bold;
+}
+/* 🌈 Header 样式 */
+.header {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1rem;
+    color: #555;
+    margin-top: -10px;
+}
+
+/* 📎 Label 样式 */
+.upload-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #333;
+    font-size: 1.1rem;
 }

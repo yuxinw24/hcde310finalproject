@@ -5,17 +5,33 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>📅 Subtasks Breakdown</h1>
+    <h1> Subtasks Breakdown</h1>
+
     {% if tasks %}
-    <ul>
+    <ul class="task-list">
         {% for task, date in tasks %}
-        <li><strong>{{ date }}:</strong> {{ task }}</li>
+            <li>
+                <strong>{{ date }}:</strong>
+                {% if "Research" in task %}
+                    <span class="step-research">{{ task }}</span>
+                {% elif "Draft" in task %}
+                    <span class="step-draft">{{ task }}</span>
+                {% elif "Revise" in task %}
+                    <span class="step-revise">{{ task }}</span>
+                {% elif "Submit" in task %}
+                    <span class="step-submit">{{ task }}</span>
+                {% else %}
+                    {{ task }}
+                {% endif %}
+            </li>
         {% endfor %}
     </ul>
-    <img src="{{ url_for('static', filename='heatmap.png') }}" alt="Heatmap">
+
+    <img class="heatmap" src="{{ url_for('static', filename='heatmap.png') }}" alt="Task Heatmap">
     {% else %}
     <p>No tasks found in your syllabus.</p>
     {% endif %}
-    <footer>Generated with ✨ ClassRadar</footer>
+
+    <footer>Designed by Yuxin Wu</footer>
 </body>
 </html>

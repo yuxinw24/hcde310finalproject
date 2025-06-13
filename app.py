@@ -6,7 +6,7 @@ app = Flask(__name__)
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-TODOIST_TOKEN = "your_token_here"  # Replace with your actual Todoist token
+TODOIST_TOKEN = ""  # Replace with your actual Todoist token
 
 @app.route('/', methods=["GET", "POST"])
 def index():

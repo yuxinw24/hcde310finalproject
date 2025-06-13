@@ -5,11 +5,21 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>📚 ClassRadar</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="syllabus" required>
+
+    <div class="header">
+        <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="ClassRadar Logo" class="logo">
+        <h1>ClassRadar</h1>
+        <p class="tagline">Turn your syllabus into a study plan ✨</p>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data" onsubmit="showLoading()">
+        <label for="syllabus" class="upload-label">Upload your syllabus (PDF)</label>
+        <input type="file" name="syllabus" id="syllabus" required>
         <button type="submit">Upload Syllabus</button>
+
     </form>
-    <footer>Designed with 💙 by 吴雨馨</footer>
+
+    <footer>Designed by Yuxin Wu</footer>
+
 </body>
 </html>

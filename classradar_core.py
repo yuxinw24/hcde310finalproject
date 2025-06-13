@@ -55,7 +55,7 @@ def send_to_todoist(subtasks, token):
 
 def generate_heatmap(subtasks):
     if not subtasks:
-        print("⚠️ No tasks to plot.")
+        print(" No tasks to plot.")
         return
 
     df = pd.DataFrame(subtasks, columns=["Task", "Date"])
@@ -75,7 +75,7 @@ def generate_heatmap(subtasks):
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%b %d"))
     plt.xticks(rotation=45)
 
-    plt.title("📅 ClassRadar - Workload Heatmap", fontsize=14)
+    plt.title(" ClassRadar - Workload Heatmap", fontsize=14)
     plt.ylabel("Tasks per Day")
     plt.xlabel("Date")
     plt.grid(axis='y', linestyle='--', alpha=0.3)
